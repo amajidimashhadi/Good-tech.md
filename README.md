@@ -1,5 +1,5 @@
 # Good-tech.md
-a quiz for techs 
+a quiz for fire truck maintenance 
 class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
