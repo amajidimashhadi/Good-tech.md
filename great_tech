@@ -1,0 +1,30 @@
+questions = ("how much air should be in a tire of fire truck?: ",
+             "when do you need to replace brakes on med units?: ",
+             "when is PM due for fire truck?: ",
+             "when performing PM service what do you check on the truck?: ")
+
+options = (("A. 35 psi ", "B. 107 psi", "C. 300 psi", "D. non"),
+           ("A. when at 2mm", "B. when at 10mm", "C. when making noise", "D. when at 4mm"),
+           ("A. every week", "B. one every month", "C. never", "D. every 6 months or 5k miles"),
+           ("A. from head to the end", "B. only the brakes", "C. only the sirens", "D. the lights"))
+
+answers = ("B","D","D","A")
+guesses = []
+score = 0
+question_num = 0
+
+for question in questions:
+    print("-------------------------------")
+    print(question)
+    for option in options[question_num]:
+        print(option)
+
+    guess = input("Enter (A, B, C, D): ").upper()
+    guesses.append(guess)
+    if guess == answers[question_num]:
+        score += 1 
+        print("CORRECT!")
+    else:
+        print("INCORRECT")
+        print(f"{answers[question_num]} is the correct answer")
+    question_num += 1
